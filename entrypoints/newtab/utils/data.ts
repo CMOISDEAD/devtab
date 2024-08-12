@@ -61,5 +61,43 @@ export const links = [
         url: "https://www.hbo.com/"
       }
     ]
+  },
+  {
+    title: "Social",
+    links: [
+      {
+        title: "Facebook",
+        url: "https://www.facebook.com/"
+      },
+      {
+        title: "Twitter",
+        url: "https://twitter.com/"
+      },
+      {
+        title: "Instagram",
+        url: "https://www.instagram.com/"
+      },
+      {
+        title: "LinkedIn",
+        url: "https://www.linkedin.com/"
+      }
+    ]
+  },
+  {
+    title: "History and recents",
+    links: [
+      {
+        title: "Google",
+        url: "https://www.google.com/"
+      },
+      {
+        title: "Wikipedia",
+        url: "https://www.wikipedia.org/"
+      },
+      {
+        title: "GitHub",
+        url: "https://www.wikipedia.org/"
+      },
+    ]
   }
 ]

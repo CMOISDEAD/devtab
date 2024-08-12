@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  background: url("https://wallpapercave.com/wp/wp7925391.jpg") center center fixed;
+  background-size: cover;
+}
