@@ -5,11 +5,11 @@ interface DataState {
   username: string;
   profileImage: string;
   backgroundImage: string;
-  links: ISection | [];
+  links: ISection[] | [];
   setUsername: (username: string) => void;
   setProfileImage: (profileImage: string) => void;
   setBackgroundImage: (backgroundImage: string) => void;
-  setLinks: (links: ISection | []) => void;
+  setLinks: (links: ISection[] | []) => void;
 }
 
 const useDataStore = create<DataState>()(persist((set) => ({

@@ -1,7 +1,7 @@
 import { Button, Card, Link } from "@nextui-org/react"
 import { Github, Home, Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
-import { Settings } from "./Settings";
+import { Settings } from "./modals/Settings";
 
 export const Sidebar = () => {
   return (

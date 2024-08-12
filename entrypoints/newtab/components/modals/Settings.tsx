@@ -1,7 +1,8 @@
 import { SubmitHandler, useForm } from "react-hook-form";
 import { Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button, useDisclosure, Input } from "@nextui-org/react";
 import { Settings2 } from "lucide-react";
-import useDataStore from "../store/useDataStore";
+
+import useDataStore from "../../store/useDataStore";
 
 interface Inputs {
   username: string;
