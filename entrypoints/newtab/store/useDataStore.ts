@@ -3,19 +3,23 @@ import { createJSONStorage, persist } from "zustand/middleware";
 
 interface DataState {
   username: string;
-  image: string;
+  profileImage: string;
+  backgroundImage: string;
   links: ISection | [];
   setUsername: (username: string) => void;
-  setImage: (image: string) => void;
+  setProfileImage: (profileImage: string) => void;
+  setBackgroundImage: (backgroundImage: string) => void;
   setLinks: (links: ISection | []) => void;
 }
 
 const useDataStore = create<DataState>()(persist((set) => ({
   username: "user",
-  image: "https://github.com/CMOISDEAD.png",
+  profileImage: "https://github.com/CMOISDEAD.png",
+  backgroundImage: "",
   links: [],
   setUsername: (username) => set({ username }),
-  setImage: (image) => set({ image }),
+  setProfileImage: (profileImage) => set({ profileImage }),
+  setBackgroundImage: (backgroundImage) => set({ backgroundImage }),
   setLinks: (links) => set({ links }),
 }),
   {

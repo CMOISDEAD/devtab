@@ -24,7 +24,7 @@ export const Clock = () => {
   })
 
   return (
-    <div className="flex justify-center items-center gap-5 mt-3">
+    <div className="flex items-center gap-5 mt-3">
       <p>{date}</p>
       <p>{hours}</p>
       <p>Sunny</p>
