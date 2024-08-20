@@ -1,8 +1,8 @@
 {
-  "name": "wxt-react-starter",
-  "description": "manifest.json description",
+  "name": "devtab",
+  "description": "devtab is a simple new tab home for developers.",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
     "dev": "wxt",
