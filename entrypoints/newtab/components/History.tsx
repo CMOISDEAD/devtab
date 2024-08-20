@@ -1,12 +1,30 @@
-import { Card, CardBody, CardHeader } from "@nextui-org/react"
+import { Card, CardBody, CardHeader, Tab, Tabs } from "@nextui-org/react"
 
 export const History = () => {
   return (
-    <Card isBlurred className="w-1/6 h-full">
-      <CardHeader>History</CardHeader>
-      <CardBody>
-        <p>History is empty</p>
-      </CardBody>
-    </Card>
+    <div className="flex flex-col gap-2 h-full">
+      <Tabs aria-label="sections">
+        <Tab key="history" title="history" className="h-full">
+          <Card className="h-full">
+            <CardHeader>
+              <h2 className="text-2xl font-bold">History</h2>
+            </CardHeader>
+            <CardBody>
+              History
+            </CardBody>
+          </Card>
+        </Tab>
+        <Tab key="bookmarks" title="Bookmarks" className="h-full">
+          <Card className="h-full">
+            <CardHeader>
+              <h2 className="text-2xl font-bold">Bookmarks</h2>
+            </CardHeader>
+            <CardBody>
+              Bookmarks
+            </CardBody>
+          </Card>
+        </Tab>
+      </Tabs>
+    </div>
   )
 }

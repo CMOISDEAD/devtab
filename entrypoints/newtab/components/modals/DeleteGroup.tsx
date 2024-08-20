@@ -1,23 +1,25 @@
-import { Modal, ModalContent, ModalHeader, ModalBody, Button, useDisclosure } from "@nextui-org/react";
+import { Modal, ModalContent, ModalHeader, ModalBody, Button, useDisclosure, Tooltip } from "@nextui-org/react";
 
 import useDataStore from "../../store/useDataStore";
 import { Trash } from "lucide-react";
 
-export const DeleteCard = ({ id }: { id: number }) => {
-  const { links, setLinks } = useDataStore(state => state)
+export const DeleteGroup = ({ group_id }: { group_id: number }) => {
+  const { groups, setGroups } = useDataStore(state => state)
   const { isOpen, onOpen, onOpenChange, onClose } = useDisclosure();
 
   const handleRemove = () => {
     // TODO: should implement a better way to remove the card, uuid or something
-    setLinks(links.filter((_, i) => i !== id))
+    setGroups(groups.filter((_, i) => i !== group_id))
     onClose()
   }
 
   return (
     <>
-      <Button isIconOnly size="sm" variant="light" color="danger" onPress={onOpen}>
-        <Trash className="w-3 h-3" />
-      </Button>
+      <Tooltip content="Delete Group">
+        <Button isIconOnly size="sm" variant="light" color="danger" onPress={onOpen}>
+          <Trash className="w-3 h-3" />
+        </Button>
+      </Tooltip>
       <Modal size="sm" isOpen={isOpen} onOpenChange={onOpenChange}>
         <ModalContent>
           <ModalHeader className="flex flex-col gap-1">Delete Card</ModalHeader>

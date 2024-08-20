@@ -3,6 +3,7 @@ import { Clock } from "./Clock"
 import useDataStore from "../store/useDataStore"
 
 export const Welcome = () => {
+  // FIX: profile image fallback to a local image
   const { profileImage, username } = useDataStore(state => state);
 
   return (
@@ -10,7 +11,9 @@ export const Welcome = () => {
       <Image src={profileImage} className="w-32" />
       <div>
         <h1 className="text-4xl font-bold capitalize">Welcome, {username}</h1>
-        <p className="text-lg mt-3">This is a simple new tab extension.</p>
+        <p className="text-lg mt-3">
+          This is a simple new tab extension for developers.
+        </p>
         <Clock />
       </div>
     </div>

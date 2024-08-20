@@ -5,7 +5,7 @@ import { Settings } from "./modals/Settings";
 
 export const Sidebar = () => {
   return (
-    <Card className="h-[93.6vh] min-w-fit w-fit p-2 flex flex-col justify-between">
+    <Card className="h-full min-w-fit w-fit p-2 flex flex-col justify-between">
       <div className="flex flex-col gap-2">
         <Button isIconOnly size="sm" variant="light">
           <Home className="w-5 h-5" />

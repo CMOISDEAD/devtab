@@ -1,9 +1,9 @@
-interface ILink {
+type LinkType = {
   title: string;
   url: string;
 }
 
-interface ISection {
+type GroupType = {
   title: string;
-  links: ILink[];
+  links: LinkType[];
 }

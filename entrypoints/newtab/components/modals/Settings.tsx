@@ -37,8 +37,8 @@ export const Settings = () => {
           <ModalBody>
             <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-2">
               <Input placeholder="jhon doe" label="Username" {...register("username", { required: true })} variant="flat" />
-              <Input placeholder="background image" label="Background Image" {...register("backgroundImage", { required: true })} />
-              <Input placeholder="profile image" label="Profile Image" {...register("profileImage", { required: true })} />
+              <Input placeholder="background image" label="Background Image" {...register("backgroundImage", {})} />
+              <Input placeholder="profile image" label="Profile Image" {...register("profileImage", {})} />
               <Button size="sm" color="primary" type="submit">
                 Save Configuration
               </Button>

@@ -5,22 +5,22 @@ interface DataState {
   username: string;
   profileImage: string;
   backgroundImage: string;
-  links: ISection[] | [];
+  groups: GroupType[] | [];
   setUsername: (username: string) => void;
   setProfileImage: (profileImage: string) => void;
   setBackgroundImage: (backgroundImage: string) => void;
-  setLinks: (links: ISection[] | []) => void;
+  setGroups: (groups: GroupType[] | []) => void;
 }
 
 const useDataStore = create<DataState>()(persist((set) => ({
   username: "user",
   profileImage: "https://github.com/CMOISDEAD.png",
   backgroundImage: "",
-  links: [],
+  groups: [],
   setUsername: (username) => set({ username }),
   setProfileImage: (profileImage) => set({ profileImage }),
   setBackgroundImage: (backgroundImage) => set({ backgroundImage }),
-  setLinks: (links) => set({ links }),
+  setGroups: (groups) => set({ groups }),
 }),
   {
     name: 'home-storage',

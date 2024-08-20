@@ -1,5 +1,5 @@
 import { History } from "./components/History";
-import { Links } from "./components/Links";
+import { GroupsSection } from "./components/GroupsSection";
 import { SearchBar } from "./components/SearchBar";
 import { Sidebar } from "./components/Sidebar";
 import { Welcome } from "./components/Welcome";
@@ -9,6 +9,7 @@ function App() {
   const { backgroundImage } = useDataStore(state => state);
 
   useEffect(() => {
+    if (!backgroundImage) return;
     document.body.style.backgroundImage = `url(${backgroundImage})`;
   }, [backgroundImage])
 
@@ -20,7 +21,7 @@ function App() {
         <div className="flex flex-col gap-2">
           <SearchBar />
           <div className="flex content-center items-center gap-2">
-            <Links />
+            <GroupsSection />
             <History />
           </div>
         </div>
