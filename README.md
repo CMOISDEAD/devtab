@@ -11,11 +11,11 @@
 
 # 🖌️ Preview
 
-| STYLE | IMAGE |
-|-------|-------|
-| BG    | ![1724193268](https://github.com/user-attachments/assets/0f7c6748-a93e-461d-b148-a22ac69ebdd7)|
-| LIGHT |![1724193079](https://github.com/user-attachments/assets/cc4c8632-bd39-442e-8bf8-77547df9e4ca)|
-| DARK  |![1724193084](https://github.com/user-attachments/assets/48222330-96f8-4418-897f-38df07f47036)|
+| Images |
+|-------|
+| ![1724193268](https://github.com/user-attachments/assets/0f7c6748-a93e-461d-b148-a22ac69ebdd7)|
+| ![1724193079](https://github.com/user-attachments/assets/cc4c8632-bd39-442e-8bf8-77547df9e4ca)|
+| ![1724193084](https://github.com/user-attachments/assets/48222330-96f8-4418-897f-38df07f47036)|
 
 # 🚀 Features
 
