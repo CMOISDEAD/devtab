@@ -12,5 +12,6 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
       <NextThemesProvider attribute="class" defaultTheme="dark">
         <App />
       </NextThemesProvider>
-    </NextUIProvider>  </React.StrictMode>,
+    </NextUIProvider>
+  </React.StrictMode>,
 );

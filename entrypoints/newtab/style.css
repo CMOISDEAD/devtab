@@ -6,3 +6,16 @@ body {
   background: center center fixed;
   background-size: cover;
 }
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f100;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #444;
+}

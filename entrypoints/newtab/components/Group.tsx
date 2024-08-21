@@ -12,7 +12,7 @@ interface Props {
 
 export const Group = ({ id, title, links }: Props) => {
   return (
-    <Card className="min-w-60 w-60 min-h-64 flex-1">
+    <Card className="min-w-60 w-60 h-full flex-1">
       <CardHeader className="flex justify-between items-center">
         <h3 className="text-lg font-semibold line-clamp-1">{title}</h3>
       </CardHeader>

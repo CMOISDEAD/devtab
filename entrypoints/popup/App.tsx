@@ -1,34 +1,21 @@
-import { useState } from 'react';
-import reactLogo from '@/assets/react.svg';
-import wxtLogo from '/wxt.svg';
-import './App.css';
+import { Button, Image } from "@nextui-org/react";
+import { Github } from "lucide-react";
+import WTX_LOGO from "/wxt.svg";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <>
-      <div>
-        <a href="https://wxt.dev" target="_blank">
-          <img src={wxtLogo} className="logo" alt="WXT logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>WXT + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
+    <div className="h-80 w-64 p-5 flex flex-col justify-between items-center content-center">
+      <h1 className="text-2xl font-bold text-center">DEVTAB</h1>
+      <Image src={WTX_LOGO} alt="DEVTAB logo" />
+      <div className="flex flex-col gap-2 content-center items-center">
+        <Button fullWidth startContent={<Github />}>
+          Login with GitHub
+        </Button>
+        <p className="text-xs text-default text-center">
+          Login to save your settings and enable some features.
         </p>
       </div>
-      <p className="read-the-docs">
-        Click on the WXT and React logos to learn more
-      </p>
-    </>
+    </div>
   );
 }
 

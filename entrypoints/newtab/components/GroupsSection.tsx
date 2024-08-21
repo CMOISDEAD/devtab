@@ -16,7 +16,7 @@ export const GroupsSection = () => {
         </h2>
         <AddEditGroup />
       </CardHeader>
-      <CardBody className="grid grid-cols-4 grid-flow-row gap-4">
+      <CardBody className="grid grid-cols-4 grid-flow-row gap-4 p-0">
         {groups.length ? groups.map((link, i) => (
           <Group key={i} id={i} title={link.title} links={link.links} />
         )) : (
