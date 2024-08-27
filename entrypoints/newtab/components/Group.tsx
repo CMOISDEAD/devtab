@@ -12,18 +12,18 @@ interface Props {
 
 export const Group = ({ id, title, links }: Props) => {
   return (
-    <Card className="min-w-60 w-60 h-full flex-1">
+    <Card shadow="none" className="flex-1 w-60 h-[17.7rem]">
       <CardHeader className="flex justify-between items-center">
         <h3 className="text-lg font-semibold line-clamp-1">{title}</h3>
       </CardHeader>
-      <CardBody>
+      <CardBody className="overflow-auto">
         <ul>
           {links.length ? links.map((link, i) => (
             <li key={i} className="my-2">
               <Link link={link} group_id={id} link_id={i} />
             </li>
           )) : (
-            <p>No links found</p>
+            <p className="text-xs text-center">No links found</p>
           )}
         </ul>
       </CardBody>

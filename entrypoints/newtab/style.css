@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  background: center center fixed;
+  background: center center fixed no-repeat;
   background-size: cover;
 }
 
