@@ -1,5 +1,5 @@
 import { SubmitHandler, useForm } from "react-hook-form";
-import { Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button, useDisclosure, Input } from "@nextui-org/react";
+import { Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button, useDisclosure, Input, Textarea } from "@nextui-org/react";
 import { Settings2 } from "lucide-react";
 
 import useDataStore from "../../store/useDataStore";
@@ -8,21 +8,26 @@ interface Inputs {
   username: string;
   backgroundImage: string;
   profileImage: string;
+  youtubeChannels: string;
 }
 
 export const Settings = () => {
-  const { username, profileImage, backgroundImage } = useDataStore(state => state);
+  const { username, profileImage, backgroundImage, youtubeChannels } = useDataStore(state => state);
   const { isOpen, onOpen, onOpenChange, onClose } = useDisclosure();
   const { register, handleSubmit } = useForm<Inputs>({
     defaultValues: {
       username,
       profileImage,
-      backgroundImage
+      backgroundImage,
+      youtubeChannels: youtubeChannels.join(","),
     }
   })
 
   const onSubmit: SubmitHandler<Inputs> = (data) => {
-    useDataStore.setState(data);
+    useDataStore.setState({
+      ...data,
+      youtubeChannels: data.youtubeChannels.split(",").filter((channel) => channel.trim() !== "")
+    });
     onClose();
   };
 
@@ -39,6 +44,12 @@ export const Settings = () => {
               <Input placeholder="jhon doe" label="Username" {...register("username", { required: true })} variant="flat" />
               <Input placeholder="background image" label="Background Image" {...register("backgroundImage", {})} />
               <Input placeholder="profile image" label="Profile Image" {...register("profileImage", {})} />
+              <Textarea
+                label="Channels Ids"
+                placeholder="youtube channels ids"
+                description="add the youtube channels ids separated by commas"
+                {...register("youtubeChannels", {})}
+              />
               <Button size="sm" color="primary" type="submit">
                 Save Configuration
               </Button>

@@ -19,10 +19,7 @@ const useDataStore = create<DataState>()(persist((set) => ({
   profileImage: "https://github.com/CMOISDEAD.png",
   backgroundImage: "",
   groups: [],
-  youtubeChannels: [
-    "UCxGgQhryT47LYlRswnQ41bg",
-    "UCccpWXiJ8cNjiuHvSDE3eOg"
-  ],
+  youtubeChannels: [],
   setUsername: (username) => set({ username }),
   setProfileImage: (profileImage) => set({ profileImage }),
   setBackgroundImage: (backgroundImage) => set({ backgroundImage }),
