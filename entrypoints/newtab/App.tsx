@@ -3,6 +3,7 @@ import { SearchBar } from "./components/SearchBar";
 import { Sidebar } from "./components/Sidebar";
 import { Welcome } from "./components/Welcome";
 import { Marks } from "./components/marks/Marks";
+import { YtCarousel } from "./components/youtube/YtCarousel";
 import useDataStore from "./store/useDataStore";
 
 function App() {
@@ -17,7 +18,10 @@ function App() {
     <div className="flex gap-2 backdrop-blur-sm p-5 h-screen">
       <Sidebar />
       <main className="flex-1 flex flex-col justify-between w-full h-full">
-        <Welcome />
+        <div className="w-full flex justify-between gap-2">
+          <Welcome />
+          <YtCarousel />
+        </div>
         <div className="flex flex-col gap-2 h-96">
           <SearchBar />
           <div className="flex gap-2">

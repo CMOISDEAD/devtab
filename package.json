@@ -16,17 +16,22 @@
   },
   "dependencies": {
     "@nextui-org/react": "^2.4.6",
+    "axios": "^1.7.6",
+    "date-fns": "^3.6.0",
+    "events": "^3.3.0",
     "framer-motion": "^11.3.24",
     "lucide-react": "^0.427.0",
     "next-themes": "^0.3.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-hook-form": "^7.52.2",
+    "xml2js": "^0.6.2",
     "zustand": "^4.5.4"
   },
   "devDependencies": {
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
+    "@types/xml2js": "^0.4.14",
     "@wxt-dev/module-react": "^1.1.0",
     "autoprefixer": "^10.4.20",
     "postcss": "^8.4.41",

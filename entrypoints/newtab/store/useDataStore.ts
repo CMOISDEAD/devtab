@@ -6,10 +6,12 @@ interface DataState {
   profileImage: string;
   backgroundImage: string;
   groups: GroupType[] | [];
+  youtubeChannels: string[];
   setUsername: (username: string) => void;
   setProfileImage: (profileImage: string) => void;
   setBackgroundImage: (backgroundImage: string) => void;
   setGroups: (groups: GroupType[] | []) => void;
+  setYoutubeChannels: (youtubeChannels: string[]) => void;
 }
 
 const useDataStore = create<DataState>()(persist((set) => ({
@@ -17,10 +19,15 @@ const useDataStore = create<DataState>()(persist((set) => ({
   profileImage: "https://github.com/CMOISDEAD.png",
   backgroundImage: "",
   groups: [],
+  youtubeChannels: [
+    "UCxGgQhryT47LYlRswnQ41bg",
+    "UCccpWXiJ8cNjiuHvSDE3eOg"
+  ],
   setUsername: (username) => set({ username }),
   setProfileImage: (profileImage) => set({ profileImage }),
   setBackgroundImage: (backgroundImage) => set({ backgroundImage }),
   setGroups: (groups) => set({ groups }),
+  setYoutubeChannels: (youtubeChannels) => set({ youtubeChannels }),
 }),
   {
     name: 'home-storage',

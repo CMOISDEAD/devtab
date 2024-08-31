@@ -2,7 +2,7 @@ import { Card, CardHeader, CardBody, CardFooter } from "@nextui-org/react";
 import { DeleteGroup } from "./modals/DeleteGroup";
 import { AddLink } from "./modals/AddLink";
 import { AddEditGroup } from "./modals/AddEditGroup";
-import { Link } from "./Link/Link";
+import { Link } from "./link/Link";
 
 interface Props {
   id: number,
