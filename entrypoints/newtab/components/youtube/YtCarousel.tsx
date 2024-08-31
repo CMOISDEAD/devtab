@@ -13,14 +13,14 @@ export const YtCarousel = () => {
         </h3>
       </CardHeader>
       <CardBody className="h-fit flex flex-col gap-2">
-        {!error || videos.length ? videos.map((video: VideoType) => (
-          <YtVideo key={video.id} {...video} />
-        )) : (
-          <p className="text-xs text-center">
-            {
-              error || "No videos found"
-            }
+        {error || !videos.length ? (
+          <p className="text-xs text-center text-gray-500">
+            {error || "No videos found"}
           </p>
+        ) : (
+          videos.map((video: VideoType) => (
+            <YtVideo key={video.id} {...video} />
+          ))
         )}
       </CardBody>
     </Card>

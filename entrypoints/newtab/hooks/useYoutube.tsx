@@ -35,6 +35,7 @@ export const useYoutube = ({ maxResults = 5 }) => {
           });
         }
       });
+
       return videoList;
     } catch (error: any) {
       console.error(error);
@@ -44,8 +45,12 @@ export const useYoutube = ({ maxResults = 5 }) => {
   };
 
   useEffect(() => {
+    console.log("Fetching youtube videos")
     const fetchVideos = async () => {
-      if (youtubeChannels.length === 0) return;
+      if (youtubeChannels.length === 0) {
+        setVideos([]);
+        return;
+      };
 
       const allVideos: VideoType[] = [];
       for (const channelId of youtubeChannels) {
